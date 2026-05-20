@@ -369,6 +369,116 @@
   box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
 }
 
+/* 进阶方案特有样式 */
+.leverage-trade-form.advanced {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2px;
+}
+
+.leverage-trade-form.advanced > * {
+  background: white;
+  border-radius: 10px;
+}
+
+.leverage-trade-form.advanced h1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 摘要区块 */
+.summary-section {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.summary-section:last-child {
+  border-bottom: none;
+}
+
+.summary-section h4 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 600;
+}
+
+/* 提示文本 */
+.hint {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  color: #999;
+}
+
+/* 危险信息框 */
+.info-box.danger {
+  background: #f8d7da;
+  border-left: 4px solid #dc3545;
+}
+
+.info-box.danger h4 {
+  color: #721c24;
+  margin-bottom: 10px;
+}
+
+.info-box.danger p {
+  margin: 0;
+  color: #721c24;
+  line-height: 1.6;
+}
+
+.info-box.danger ul {
+  margin: 10px 0 0 20px;
+  color: #721c24;
+}
+
+.info-box.danger ul li {
+  margin-bottom: 5px;
+}
+
+/* 单选卡片增强 */
+.radio-card small {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #999;
+  font-weight: normal;
+}
+
+.radio-card:hover {
+  border-color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+/* 步骤完成标记 */
+.step.completed .step-number::after {
+  content: '✓';
+  position: absolute;
+  font-size: 20px;
+}
+
+/* 加载动画 */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.btn:disabled::after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
   .leverage-trade-form {
@@ -395,5 +505,17 @@
 
   .btn {
     width: 100%;
+  }
+
+  .step-content {
+    min-height: 300px;
+  }
+
+  .order-summary {
+    padding: 15px;
+  }
+
+  .summary-row {
+    font-size: 14px;
   }
 }
